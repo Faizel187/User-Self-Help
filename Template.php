@@ -40,7 +40,7 @@
             <div class="header-wrapper">
                 <div class="logo-area">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
@@ -56,7 +56,18 @@
                         <a href="faq.php">FAQ`s</a>
                     </li>
                     <li>
-                        <a href="training.php">Training</a>
+                        <a href="#">Training</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="office.php">Office 365</a>
+                            </li>
+                            <li>
+                                <a href="powerapps.php">Power Apps</a>
+                            </li>
+                            <li>
+                                <a href="teams.php">Teams</a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="d-md-none text-center">
@@ -163,7 +174,7 @@ echo $content;
                                     <a href="faq.php">FAQ`s</a>
                                 </li>
                                 <li>
-                                    <a href="training.php">Training</a>
+                                    <a href="teams.php">Training</a>
                                 </li>
                             </ul>
                         </div>
