@@ -1,3 +1,10 @@
+<script type="text/javascript">
+  function myFunction(path) {
+    document.getElementById('myIframe').src = path;
+  }
+  </script>
+
+
 <?php
 
 $title = 'Nkgwete IT Solutions | Help Centere';
@@ -30,7 +37,7 @@ $content = '
                     </div>
 
                     <!-- SHOW DOCUMENT CONTENT HERE -->
-                    <iframe src="content/POLL023.pdf#toolbar=1&navpanes=0&scrollbar=0" frameborder="0" style="overflow:hidden;height:750px;width:100%;position:relative;top:0px;left:0px;right:0px;bottom:0px;"></iframe>
+                    <iframe id="myIframe" src="content/POLL023.pdf#toolbar=1&navpanes=0&scrollbar=0" frameborder="0" style="overflow:hidden;height:750px;width:100%;position:relative;top:0px;left:0px;right:0px;bottom:0px;"></iframe>
                 </div>
             </div>
         
