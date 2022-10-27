@@ -56,7 +56,7 @@
                         <a href="faq.php">FAQ`s</a>
                     </li>
                     <li>
-                        <a href="#">Training</a>
+                        <a href="#">How To</a>
                         <ul class="submenu">
                             <li>
                                 <a href="office.php">Office 365</a>
