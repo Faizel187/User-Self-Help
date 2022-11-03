@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2022 at 02:43 PM
+-- Generation Time: Nov 02, 2022 at 02:23 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -112,14 +112,14 @@ CREATE TABLE `solution` (
 --
 
 INSERT INTO `solution` (`solno`, `soltitle`, `soldesc`, `solcreated`, `sollocation`, `catno`) VALUES
-(19, 'User changing password to Self Help Portal', 'Steps to follow when changing your password', '2022-10-17', NULL, NULL),
-(20, 'Dual display settings', 'Clients need to follow the steps mentioned for them to display in extended mode meaning 2 separate displays.', '2022-10-17', NULL, NULL),
-(21, 'How to reset a-account', 'Steps to follow/instructions to change your a-account', '2022-10-17', NULL, NULL),
-(22, 'Knowledge Article – Cellular Icon Disappearing', 'User wants connect to he internet using cellular connection, however cellular icon does not appear', '2022-10-17', NULL, NULL),
-(23, 'Knowledge Articles-Eskom FCR 5 Service Desk', 'Eskom FCR 5 Service Desk: Outlook keeps asking for a password and will not accept it', '2022-10-17', NULL, NULL),
-(24, 'Network related troubleshooting', 'Network related trouble-shooting that the client can do', '2022-10-17', NULL, NULL),
-(25, 'Work from home IT telecommuting guide', 'Helpful information to assist you on your telecommuting journey!', '2022-10-17', NULL, NULL),
-(26, 'VC Trouble Shooting', 'VC Trouble Shooting', '2022-10-17', NULL, NULL);
+(19, 'User changing password to A- account', 'Steps to follow when changing your password', '2022-10-17', NULL, 4),
+(20, 'Dual display settings', 'Clients need to follow the steps mentioned for them to display in extended mode meaning 2 separate displays.', '2022-10-17', NULL, 3),
+(21, 'How to reset a-account', 'Steps to follow/instructions to change your a-account', '2022-10-17', NULL, 4),
+(22, 'Knowledge Article – Cellular Icon Disappearing', 'User wants connect to he internet using cellular connection, however cellular icon does not appear', '2022-10-17', NULL, 4),
+(23, 'Knowledge Articles-Eskom FCR 5 Service Desk', 'Eskom FCR 5 Service Desk: Outlook keeps asking for a password and will not accept it', '2022-10-17', NULL, 4),
+(24, 'Network related troubleshooting', 'Network related trouble-shooting that the client can do', '2022-10-17', NULL, 1),
+(25, 'Work from home IT telecommuting guide', 'Helpful information to assist you on your telecommuting journey!', '2022-10-17', NULL, 1),
+(26, 'VC Trouble Shooting', 'VC Trouble Shooting', '2022-10-17', NULL, 4);
 
 --
 -- Indexes for dumped tables

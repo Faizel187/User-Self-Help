@@ -7,7 +7,15 @@ $title = 'Office Articles';
 
 
 $content = '
-
+<!--============= Banner Section Starts Here =============-->
+<div class="hero-section bg_img" data-background="assets/images/banner/short-banner.jpg">
+    <div class="container">
+        <div class="banner-content cl-white">
+            <p>Microsoft 365 TroubleShooting</p>
+        </div>
+    </div>
+</div>
+<!--============= Banner Section Ends Here =============-->
     <section class="popular-section padding-top padding-bottom section-bg-2">
         <div class="container">
             <div class="section-header-2">
