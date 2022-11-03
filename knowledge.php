@@ -66,7 +66,7 @@ $content = '
                         <img src="assets/images/bill/office.png" alt="bill">
                     </div>
                     <div class="bill-content">
-                        <h3 class="title"><a href="#0">Office 365</a></h3>
+                        <h3 class="title"><a href="office.php">Office 365</a></h3>
                         <p>Microsoft Teams; Email; Word; Excel; PowerPoint; OneNote, OneDrive</p>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ $content = '
                         <img src="assets/images/bill/network.png" alt="bill">
                     </div>
                     <div class="bill-content">
-                        <h3 class="title"><a href="#0">Network</a></h3>
+                        <h3 class="title"><a href="network.php">Network</a></h3>
                         <p>Connecting to network; Troubleshoot network; VPN; 3G</p>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ $content = '
                         <img src="assets/images/bill/windows.png" alt="bill">
                     </div>
                     <div class="bill-content">
-                        <h3 class="title"><a href="#0">Windows Settings</a></h3>
+                        <h3 class="title"><a href="settings.php">Windows Settings</a></h3>
                         <p>Personalization; Multiple Screens; Accessibility; Updates; Accounts; Storage; Security.</p>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ $content = '
                         <img src="assets/images/bill/free.png" alt="bill">
                     </div>
                     <div class="bill-content">
-                        <h3 class="title"><a href="#0">Eskom Environment</a></h3>
+                        <h3 class="title"><a href="enviroment.php">Eskom Environment</a></h3>
                         <p>Requesting Software; Hardware Troubleshooting; Printing; Backups; Unified Communications; Performance.</p>
                     </div>
                 </div>

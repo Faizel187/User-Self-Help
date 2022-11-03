@@ -59,7 +59,7 @@
                         <a href="#">How To</a>
                         <ul class="submenu">
                             <li>
-                                <a href="office.php">Office 365</a>
+                                <a href="office365.php">Office 365</a>
                             </li>
                             <li>
                                 <a href="powerapps.php">Power Apps</a>

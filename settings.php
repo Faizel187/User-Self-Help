@@ -2,7 +2,7 @@
 
 
 
-$title = 'Office Articles';
+$title = 'Windows Settings Articles';
 
 
 
@@ -12,7 +12,7 @@ $content = '
         <div class="container">
             <div class="section-header-2">
                 <div class="left-side">
-                    <h2 class="title">Office 365 articles </h2>
+                    <h2 class="title">Eskom Enviroment articles </h2>
                     <p>Discover the best of Deskoto with our Featured Articles category!</p>
                 </div>
                 <a href="viewarticle.php" class="load-more small">View All Articles</a>
