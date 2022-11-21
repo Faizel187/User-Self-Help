@@ -3,31 +3,29 @@
 //Back-End
 
 $output = '';
-require_once("Modal/config.php");
+require_once "Modal/config.php";
 
-$sql = "SELECT catname, catdesc, caticon FROM category ORDER BY catno";
+$sql = "SELECT catno, catname, catdesc, caticon FROM category ORDER BY catno";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    $output = $output . '
+    // output data of each row
+    while ($row = mysqli_fetch_assoc($result)) {
+        $output = $output . '
     <div class="col-12">
     <div class="bill-item">
         <div class="bill-thumb">
-            <img src="'.$row["caticon"].'" alt="bill">
+            <img src="' . $row["caticon"] . '" alt="bill">
         </div>
         <div class="bill-content">
-            <h3 class="title"><a href="office.php">'.$row["catname"].'</a></h3>
-            <p>'.$row["catdesc"].'</p>
+            <h3 class="title"><a href="office.php?catno=' . $row["catno"] . '">' . $row["catname"] . '</a></h3>
+            <p>' . $row["catdesc"] . '</p>
         </div>
     </div>
     </div>
     ';
-  }
-} 
-else 
-{
+    }
+} else {
     ?>
         <script>
             window.alert("Failed to get list of Knowledge Categories\nContact System Admin");
@@ -37,7 +35,6 @@ else
 }
 
 mysqli_close($conn);
-
 
 /////////////////////////////////////////////////////////////////////////////////////////
 $title = 'Nkgwete IT Solutions | Help Centere';
@@ -101,7 +98,7 @@ $content = '
             <p>Explore How-To`s and learn best practices from our knowledge base.</p>
         </div>
         <div class="row justify-content-center mb-30-none">
-            '.$output.'
+            ' . $output . '
         </div>
     </div>
 </section>

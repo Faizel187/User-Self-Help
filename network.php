@@ -1,12 +1,8 @@
 <?php
 
-
-
 $title = 'Network Articles';
 
-
-
-$content = '
+$output = '
 <!--============= Banner Section Starts Here =============-->
 <div class="hero-section bg_img" data-background="assets/images/banner/short-banner.jpg">
     <div class="container">
@@ -45,6 +41,7 @@ $content = '
                             <div class="popular-content">
                                 <span class="info">For Freelancers</span>
                                 <p>How to withdraw money from your account</p>
+
                             </div>
                         </a>
                     </div>
@@ -96,11 +93,9 @@ $content = '
             </div>
         </section>
 
+
+
+
 ';
 
-
-
-
-include 'Template.php'
-
-?>
+include 'Template.php';
