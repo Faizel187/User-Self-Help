@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
         $title = $row["soltitle"];
         $solno = $row["solno"];
 
-        $code = '
+        $code .= '
         <div class="col-lg-4 col-md-6">
         <a href="viewarticle.php?solno =' . $solno . '" class="popular-item">
             <div class="popular-thumb">
