@@ -8,6 +8,7 @@
 <?php
 
 $title = 'Nkgwete IT Solutions | Help Centere';
+$pdf = "POLL023.pdf";
 $content = '
 
 <!--============= Banner Section Starts Here =============-->
@@ -37,10 +38,10 @@ $content = '
                     </div>
 
                     <!-- SHOW DOCUMENT CONTENT HERE -->
-                    <iframe id="myIframe" src="content/POLL023.pdf#toolbar=1&navpanes=0&scrollbar=0" frameborder="0" style="overflow:hidden;height:750px;width:100%;position:relative;top:0px;left:0px;right:0px;bottom:0px;"></iframe>
+                    <iframe id="myIframe" src="content/' . $pdf . '#toolbar=1&navpanes=0&scrollbar=0" frameborder="0" style="overflow:hidden;height:750px;width:100%;position:relative;top:0px;left:0px;right:0px;bottom:0px;"></iframe>
                 </div>
             </div>
-        
+
 <!--BeGIN RIGHT SIDE-->
 
             <div class="col-xl-4 col-lg-5 mb-10">
@@ -101,8 +102,6 @@ $content = '
 </section>
 <!--============= Knowledge Single Section Ends Here =============-->
 ';
-
-
 
 include 'Template.php'
 
