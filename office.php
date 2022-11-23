@@ -5,7 +5,16 @@ $content = '';
 $code = "";
 
 require_once "Modal/config.php";
+
 $catno = $_GET['catno'];
+$get = "SELECT catname FROM category WHERE catno = '$catno'";
+$results = mysqli_query($conn, $get);
+
+if (mysqli_num_rows($results) > 0) {
+    while ($rw = $results->fetch_assoc()) {
+        $head = $rw['catname'];
+    }
+}
 $run = "SELECT solno, soltitle, soldesc, solcreated FROM solution WHERE catno = '$catno'";
 $result = mysqli_query($conn, $run);
 if (mysqli_num_rows($result) > 0) {
@@ -34,7 +43,7 @@ $content = '
 <div class="hero-section bg_img" data-background="assets/images/banner/short-banner.jpg">
     <div class="container">
         <div class="banner-content cl-white">
-            <p>Microsoft 365 TroubleShooting</p>
+<p>' . $head . ' Articles</p>
         </div>
     </div>
 </div>

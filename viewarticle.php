@@ -7,6 +7,23 @@
 
 <?php
 
+require_once "Modal/config.php";
+$solcreated = "";
+$soltitle = "";
+$sollocation = '';
+$solno = $_GET['solno'];
+$get = "SELECT soltitle, solcreated, sollocation FROM solution WHERE solno = '$solno'";
+$results = mysqli_query($conn, $get);
+
+if (mysqli_num_rows($results) > 0) {
+    while ($rw = $results->fetch_assoc()) {
+        $soltitle = $rw['soltitle'];
+        $solcreated = $rw['solcreated'];
+        $sollocation = $rw['sollocation'];
+
+    }
+}
+
 $title = 'Nkgwete IT Solutions | Help Centere';
 $pdf = "POLL023.pdf";
 $content = '
@@ -30,9 +47,9 @@ $content = '
             <div class="col-xl-8 col-lg-7 mb-10">
                 <div class="knowledge-single">
                     <div class="knowledge-header">
-                        <h3 class="title">How to add multiple organizations</h3>
+                        <h3 class="title">' . $soltitle . '</h3>
                         <ul class="knowledge-meta">
-                            <li>Created: <a href="#0">Jul 14, 2020</a></li>
+                            <li>Created: <a href="#0">' . $solcreated . '</a></li>
                             <li>Updated: <a href="#0">Sep 19, 2022</a></li>
                         </ul>
                     </div>
