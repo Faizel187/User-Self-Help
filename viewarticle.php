@@ -8,9 +8,7 @@
 <?php
 
 require_once "Modal/config.php";
-$solcreated = "";
-$soltitle = "";
-$sollocation = '';
+$info = '';
 $solno = $_GET['solno'];
 $get = "SELECT soltitle, solcreated, sollocation FROM solution WHERE solno = '$solno'";
 $results = mysqli_query($conn, $get);
@@ -20,6 +18,11 @@ if (mysqli_num_rows($results) > 0) {
         $soltitle = $rw['soltitle'];
         $solcreated = $rw['solcreated'];
         $sollocation = $rw['sollocation'];
+
+        $info = '
+        <h3 class="title">' . $soltitle . '</h3>
+
+        ';
 
     }
 }
@@ -47,10 +50,10 @@ $content = '
             <div class="col-xl-8 col-lg-7 mb-10">
                 <div class="knowledge-single">
                     <div class="knowledge-header">
-                        <h3 class="title">' . $soltitle . '</h3>
+                        ' . $info . '
                         <ul class="knowledge-meta">
                             <li>Created: <a href="#0">' . $solcreated . '</a></li>
-                            <li>Updated: <a href="#0">Sep 19, 2022</a></li>
+
                         </ul>
                     </div>
 
@@ -70,13 +73,16 @@ $content = '
                                 <h5 class="title">Is this Article Helpful?</h5>
                                 <p>Content Feedback</p>
                                 <div id="response">
-                                <a href="#0" class="call-button" onclick="response()" style="background-color: #8aca38">Yes</a>
-                                <a href="#0" class="call-button" onclick="response()" style="background-color: #00B2f2">No</a>
+                                <form action="#" method="post">
+                                <a href="#0" name="yes"  class="call-button" onclick="response()" style="background-color: #8aca38">Yes</a>
+                                <a href="#0" name="no"class="call-button" onclick="response()" style="background-color: #00B2f2">No</a>
+</form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <h5 class="title my-4">Suggested Articles</h5>
                 <div class="row justify-content-center mb-20-none">
                     <div class="col-lg-12 col-md-6">
@@ -129,3 +135,12 @@ include 'Template.php'
         document.getElementById("response").innerHTML = "Thank you for your response!"
     }
 </script>
+<?php
+if (isset($_POST['yes'])) {
+    $run = "INSERT INTO feedback (solno, feeresult) VALUES ('$solno','Yes')";
+    mysqli_query($conn, $run);
+} else if (isset($_POST['no'])) {
+    $run = "INSERT INTO feedback (solno, feeresult) VALUES ('$solno','No')";
+    mysqli_query($conn, $run);
+}
+?>

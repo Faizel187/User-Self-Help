@@ -21,11 +21,11 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = $result->fetch_assoc()) {
         $desc = $row["soldesc"];
         $title = $row["soltitle"];
-        $solno = $row["solno"];
 
         $code .= '
         <div class="col-lg-4 col-md-6">
-        <a href="viewarticle.php?solno =' . $solno . '" class="popular-item">
+        <a href="viewarticle.php?solno=' . $row["solno"] . '" class="popular-item">
+
             <div class="popular-thumb">
                 <i class="flaticon-file"></i>
             </div>
