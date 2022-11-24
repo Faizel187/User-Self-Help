@@ -34,7 +34,7 @@ if (mysqli_num_rows($result) > 0) {
                 <p>' . $row["soldesc"] . '</p>
             </div>
         </a>
-    </div>
+        </div>
         ';
     }
 }
@@ -50,9 +50,10 @@ $content = '
 <!--============= Banner Section Ends Here =============-->
     <section class="popular-section padding-top padding-bottom section-bg-2">
         <div class="container">
+        <div class="row justify-content-center mb-30-none">
 
             ' . $code . '
-
+        </div>
         </div>
     </section>
 
