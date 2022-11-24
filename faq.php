@@ -1,8 +1,6 @@
 <?php
-
 $title = 'Nkgwete IT Solutions | Help Centere';
 $content = '
-
 <!--============= Banner Section Starts Here =============-->
 <section class="banner-1 bg_img" data-background="assets/images/banner/banner-3.jpg">
     <div class="container">
@@ -13,7 +11,6 @@ $content = '
     </div>
 </section>
 <!--============= Banner Section Ends Here =============-->
-
     <!--============= Form Section Starts Here =============-->
     <div class="form-section">
         <div class="container">
@@ -24,9 +21,6 @@ $content = '
         </div>
     </div>
     <!--============= Form Section Ends Here =============-->
-
-
-
 <!--============= Faqs Section Starts Here =============-->
 <section class="faq-section padding-top padding-bottom">
     <div class="container">
@@ -56,9 +50,7 @@ $content = '
                         </ul>
                     </div>
                     <div class="faq-video">
-                       
                             <img src="assets/images/faq/video.png" alt="faq">
-                            
                     </div>
                 </aside>
             </div>
@@ -75,7 +67,7 @@ $content = '
                                     <span class="icon"></span>
                                 </div>
                                 <div class="faq-content">
-                                    <p>	How does the 3rd Party Repairs Process Work, Information goes here</p>
+                                    <p> How does the 3rd Party Repairs Process Work, Information goes here</p>
                                 </div>
                             </div>
                             <div class="faq--item">
@@ -112,7 +104,6 @@ $content = '
                                     <p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="faq--wrapper" id="account">
@@ -129,7 +120,6 @@ $content = '
                                     <p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="faq--wrapper" id="pricing">
@@ -146,7 +136,6 @@ $content = '
                                     <p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="faq--wrapper" id="tec">
@@ -179,7 +168,6 @@ $content = '
                                     <p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </article>
@@ -189,9 +177,5 @@ $content = '
 </section>
 <!--============= Faqs Section Ends Here =============-->
 ';
-
-
-
 include 'Template.php'
-
 ?>
