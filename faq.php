@@ -1,4 +1,38 @@
 <?php
+//===================================================================================
+//==================beginning of  backend================================================
+require_once "Modal/config.php";
+$data = '';
+$pull = 'SELECT areno, arename FROM area ORDER BY areno';
+$res = $conn->query($pull);
+if(mysqli_num_rows($res)>0){
+     while($r = mysqli_fetch_assoc($res)){
+    $data = '
+    <ul id="faq-menu">
+    <li class="nav-item">
+        <a class="nav-link" href="#company">'.$r["arename"].'</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#freelancer">'.$r["arename"].'</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#account">'.$r["arename"].'</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#pricing">'.$r["arename"].'</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#tec">'.$r["arename"].'</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#security">'.$r["arename"].'</a>
+    </li>
+</ul>
+    ';
+     }
+}
+//==================end of backend================================================
+//=============================================================================
 $title = 'Nkgwete IT Solutions | Help Centere';
 $content = '
 <!--============= Banner Section Starts Here =============-->
@@ -28,26 +62,7 @@ $content = '
             <div class="col-lg-4">
                 <aside class="sticky-menu">
                     <div class="faq-menu bg_img mb-30" data-background="assets/images/faq/faq-menu.png">
-                        <ul id="faq-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#company">3rd Party Repairs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#freelancer">Processes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#account">Software</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pricing">Account</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#tec">Security</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#security">General</a>
-                            </li>
-                        </ul>
+                        '.$data.'
                     </div>
                     <div class="faq-video">
                             <img src="assets/images/faq/video.png" alt="faq">
