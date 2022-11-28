@@ -30,22 +30,22 @@ if (isset($_POST['submit'])) {
     $desc = $_POST['description'];
     $category = $_POST['category'];
     $title = $_POST['title'];
-    $run = 'SELECT catno FROM category WHERE catname = "$category"';
-    $res = mysqli_query($conn, $run);
-    if (mysqli_num_rows($res) > 0) {
-        while ($row = mysqli_fetch_assoc($res)) {
-            $catno = $row['catno'];
-        }
-    }
+
     $file = rand(100, 100000) . "-" . $_FILES['location']['name'];
 
     $tname = $_FILES['location']['tmp_name'];
     $dir = "../assets/images/faq/";
-    //move file to a specific locaton
+//move file to a specific locaton
     move_uploaded_file($tname, $dir . $file);
-    //insert statement
-    $run = "INSERT INTO solution (soltitle, soldesc, sollocation,catno) VALUES ('$title','$desc','$file','$catno')";
+//insert statement
+    $run = "INSERT INTO solution (soltitle, soldesc, sollocation,catno) VALUES ('$title','$desc','$file',$category)";
     mysqli_query($conn, $run);
+    ?>
+<script>
+    window.alert("Successfully added");
+window.hostory();
+</script>
+<?php
 }
 ?>
 <!DOCTYPE html>
