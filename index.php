@@ -155,7 +155,7 @@ $content = '
            <h2 class="title">Popular articles </h2>
            <p>Discover the most viewed Articles</p>
        </div>
-       <a href="viewarticle.php" class="load-more small">View All Articles</a>
+       <a href="knowledge.php" class="load-more small">View All Articles</a>
    </div>
    <div class="row justify-content-center mb-30-none">
 ' . $articles . '
