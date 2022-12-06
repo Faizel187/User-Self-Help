@@ -30,8 +30,8 @@ if (mysqli_num_rows($result) > 0) {
                 <i class="flaticon-file"></i>
             </div>
             <div class="popular-content">
-                <span class="info">' . $row["soltitle"] . '</span>
-                <p>' . $row["soldesc"] . '</p>
+                <span class="info">' . mb_strimwidth($row["soltitle"], 0, 24, "...") . '</span>
+                <p>' . mb_strimwidth($row["soldesc"], 0, 24, "...") . '</p>
             </div>
         </a>
         </div>

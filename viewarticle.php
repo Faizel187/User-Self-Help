@@ -10,7 +10,7 @@
 require_once "Modal/config.php";
 $info = '';
 $solno = $_GET['solno'];
-$get = "SELECT soltitle, solcreated, sollocation FROM solution WHERE solno = '$solno'";
+$get = "SELECT solno, soldesc, catno, soltitle, solcreated, sollocation FROM solution WHERE solno = '$solno'";
 $results = mysqli_query($conn, $get);
 
 if (mysqli_num_rows($results) > 0) {
@@ -18,17 +18,40 @@ if (mysqli_num_rows($results) > 0) {
         $soltitle = $rw['soltitle'];
         $solcreated = $rw['solcreated'];
         $sollocation = $rw['sollocation'];
-
+        $soldesc = $rw['soldesc'];
+        $catno = $rw['catno'];
         $info = '
         <h3 class="title">' . $soltitle . '</h3>
+        <h6>' . $soldesc . '</h6><br>
 
         ';
 
     }
 }
+$data = '';
+$fetch = "SELECT soltitle, soldesc FROM solution WHERE catno = '$catno' LIMIT 3";
+$r = mysqli_query($conn, $fetch);
+if (mysqli_num_rows($r) > 0) {
+    while ($rww = $r->fetch_array()) {
+        $data .= '
+        <div class="col-lg-12 col-md-6">
+        <a href="How to Add signature on PDF file.pdf" class="popular-item">
+            <div class="popular-thumb">
+                <i class="flaticon-file"></i>
+            </div>
+            <div class="popular-content">
+                <span class="info">' . $rww["soltitle"] . '</span>
+                <p>' . mb_strimwidth($rww["soldesc"], 0, 40, "...") . '</p>
 
+            </div>
+        </a>
+    </div>
+
+     ';
+    }
+}
 $title = 'Nkgwete IT Solutions | Help Centere';
-$pdf = "POLL023.pdf";
+$pdf = "../assets/images/faq/" . $sollocation;
 $content = '
 
 <!--============= Banner Section Starts Here =============-->
@@ -58,7 +81,9 @@ $content = '
                     </div>
 
                     <!-- SHOW DOCUMENT CONTENT HERE -->
-                    <iframe id="myIframe" src="content/' . $pdf . '#toolbar=1&navpanes=0&scrollbar=0" frameborder="0" style="overflow:hidden;height:750px;width:100%;position:relative;top:0px;left:0px;right:0px;bottom:0px;"></iframe>
+                    <iframe id="myIframe" src="content/' . $pdf . '#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" style="overflow:hidden;height:750px;width:100%;position:relative;top:0px;left:0px;right:0px;bottom:0px;"></iframe>
+
+
                 </div>
             </div>
 
@@ -74,7 +99,7 @@ $content = '
                                 <p>Content Feedback</p>
                                 <div id="response">
                                 <form action="#" method="post">
-                                <a href="#0" name="yes"  class="call-button" onclick="response()" style="background-color: #8aca38">Yes</a>
+                                <button name ="yes"><a href="#0" name="yes"  class="call-button" onclick="response()" style="background-color: #8aca38">Yes</a><button>
                                 <a href="#0" name="no"class="call-button" onclick="response()" style="background-color: #00B2f2">No</a>
 </form>
                                 </div>
@@ -85,39 +110,9 @@ $content = '
 
                 <h5 class="title my-4">Suggested Articles</h5>
                 <div class="row justify-content-center mb-20-none">
-                    <div class="col-lg-12 col-md-6">
-                        <a href="How to Add signature on PDF file.pdf" class="popular-item">
-                            <div class="popular-thumb">
-                                <i class="flaticon-file"></i>
-                            </div>
-                            <div class="popular-content">
-                                <span class="info">Digital Signature</span>
-                                <p>How to add signature on PDF file</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-12 col-md-6">
-                        <a href="NODDY GUIDE TO WFH  Telecommuting March 2020_FINAL.pdf" class="popular-item">
-                            <div class="popular-thumb">
-                                <i class="flaticon-file"></i>
-                            </div>
-                            <div class="popular-content">
-                                <span class="info">Remote Work</span>
-                                <p>ESKOM - Work from Home (Remote Telecommuting)</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-12 col-md-6">
-                        <a href="Changing your password on the Self Service Portal.docx" class="popular-item">
-                            <div class="popular-thumb">
-                                <i class="flaticon-file"></i>
-                            </div>
-                            <div class="popular-content">
-                                <span class="info">For Companies</span>
-                                <p>How to withdraw money from your account</p>
-                            </div>
-                        </a>
-                    </div>
+
+' . $data . '
+
                 </div>
             </div>
         </div>
