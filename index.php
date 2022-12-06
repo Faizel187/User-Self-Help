@@ -1,4 +1,29 @@
 <?php
+require_once "Modal/config.php";
+$articles = '';
+$no = rand(1, 4);
+$pick = "SELECT soltitle, solno, soldesc FROM solution WHERE catno = '$no' LIMIT 3";
+$r = mysqli_query($conn, $pick);
+if (mysqli_num_rows($r) > 0) {
+    while ($line = $r->fetch_array()) {
+        $articles .= '
+
+
+    <div class="col-lg-4 col-md-6">
+    <a href="viewarticle.php?solno=' . $line["solno"] . '" class="popular-item">
+        <div class="popular-thumb">
+            <i class="flaticon-file"></i>
+        </div>
+        <div class="popular-content">
+        <span class="info">' . $line["soltitle"] . '</span>
+        <p>' . mb_strimwidth($line["soldesc"], 0, 40, "...") . '</p>
+        </div>
+    </a>
+</div>
+
+     ';
+    }
+}
 
 $title = 'Nkgwete IT Solutions | Help Centere';
 $content = '
@@ -11,7 +36,7 @@ $content = '
         <!--   <form  class="search-form round">
                <input type="text" placeholder="Start typing your search…">
                <button type="submit"><i class="flaticon-search"></i> <span class="d-none d-sm-inline-block">Search</span></button>
-           </form> --> 
+           </form> -->
        </div>
    </div>
 </section>
@@ -133,46 +158,12 @@ $content = '
        <a href="viewarticle.php" class="load-more small">View All Articles</a>
    </div>
    <div class="row justify-content-center mb-30-none">
-       <div class="col-lg-4 col-md-6">
-           <a href="knowledge-based-single.html" class="popular-item">
-               <div class="popular-thumb">
-                   <i class="flaticon-file"></i>
-               </div>
-               <div class="popular-content">
-                   <span class="info">EMAIL</span>
-                   <p>How to Add Signature on PDF File</p>
-               </div>
-           </a>
-       </div>
-       <div class="col-lg-4 col-md-6">
-           <a href="knowledge-based-single.html" class="popular-item">
-               <div class="popular-thumb">
-                   <i class="flaticon-file"></i>
-               </div>
-               <div class="popular-content">
-                   <span class="info">PASSWORD & ACCOUNT</span>
-                   <p>How to reset forgotten password and unlock account</p>
-               </div>
-           </a>
-       </div>
-       <div class="col-lg-4 col-md-6">
-           <a href="knowledge-based-single.html" class="popular-item">
-               <div class="popular-thumb">
-                   <i class="flaticon-file"></i>
-               </div>
-               <div class="popular-content">
-                   <span class="info">EMAIL</span>
-                   <p>Outlook AutoAchive and Manual Achive</p>
-               </div>
-           </a>
-       </div>
+' . $articles . '
    </div>
 </div>
 </section>
 <!--============= Popular Section Ends Here =============-->
 ';
-
-
 
 include 'Template.php'
 

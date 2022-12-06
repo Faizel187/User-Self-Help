@@ -29,13 +29,14 @@ if (mysqli_num_rows($results) > 0) {
     }
 }
 $data = '';
-$fetch = "SELECT soltitle, soldesc FROM solution WHERE catno = '$catno' LIMIT 3";
+
+$fetch = "SELECT soltitle, solno, soldesc FROM solution WHERE catno = '$catno' LIMIT 3";
 $r = mysqli_query($conn, $fetch);
 if (mysqli_num_rows($r) > 0) {
     while ($rww = $r->fetch_array()) {
         $data .= '
         <div class="col-lg-12 col-md-6">
-        <a href="How to Add signature on PDF file.pdf" class="popular-item">
+        <a href="viewarticle.php?solno=' . $rww["solno"] . '" class="popular-item">
             <div class="popular-thumb">
                 <i class="flaticon-file"></i>
             </div>
