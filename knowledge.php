@@ -34,6 +34,31 @@ if (mysqli_num_rows($result) > 0) {
     <?php
 }
 
+$articles = '';
+$no = rand(1, 4);
+$pick = "SELECT soltitle, solno, soldesc FROM solution WHERE catno = '$no' LIMIT 3";
+$r = mysqli_query($conn, $pick);
+if (mysqli_num_rows($r) > 0) {
+    while ($line = $r->fetch_array()) {
+        $articles .= '
+
+
+    <div class="col-lg-4 col-md-6">
+    <a href="viewarticle.php?solno=' . $line["solno"] . '" class="popular-item">
+        <div class="popular-thumb">
+            <i class="flaticon-file"></i>
+        </div>
+        <div class="popular-content">
+        <span class="info">' . $line["soltitle"] . '</span>
+        <p>' . mb_strimwidth($line["soldesc"], 0, 40, "...") . '</p>
+        </div>
+    </a>
+</div>
+
+     ';
+    }
+}
+
 mysqli_close($conn);
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -111,75 +136,9 @@ $content = '
                 <h2 class="title">Popular articles </h2>
                 <p>Discover the best of Deskoto with our Featured Articles category!</p>
             </div>
-            <a href="viewarticle.php" class="load-more small">View All Articles</a>
+            <a href="knowledge.php" class="load-more small">View All Articles</a>
         </div>
-        <div class="row justify-content-center mb-30-none">
-            <div class="col-lg-4 col-md-6">
-                <a href="viewarticle.php" class="popular-item">
-                    <div class="popular-thumb">
-                        <i class="flaticon-file"></i>
-                    </div>
-                    <div class="popular-content">
-                        <span class="info">For Freelancers</span>
-                        <p>How to withdraw money from your account</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="knowledge-based-single.html" class="popular-item">
-                    <div class="popular-thumb">
-                        <i class="flaticon-file"></i>
-                    </div>
-                    <div class="popular-content">
-                        <span class="info">For Freelancers</span>
-                        <p>How to withdraw money from your account</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="knowledge-based-single.html" class="popular-item">
-                    <div class="popular-thumb">
-                        <i class="flaticon-file"></i>
-                    </div>
-                    <div class="popular-content">
-                        <span class="info">For Companies</span>
-                        <p>How to withdraw money from your account</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="knowledge-based-single.html" class="popular-item">
-                    <div class="popular-thumb">
-                        <i class="flaticon-file"></i>
-                    </div>
-                    <div class="popular-content">
-                        <span class="info">Customization</span>
-                        <p>How to withdraw money from your account</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="knowledge-based-single.html" class="popular-item">
-                    <div class="popular-thumb">
-                        <i class="flaticon-file"></i>
-                    </div>
-                    <div class="popular-content">
-                        <span class="info">Customization</span>
-                        <p>How to withdraw money from your account</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="knowledge-based-single.html" class="popular-item">
-                    <div class="popular-thumb">
-                        <i class="flaticon-file"></i>
-                    </div>
-                    <div class="popular-content">
-                        <span class="info">Your Account</span>
-                        <p>How to withdraw money from your account</p>
-                    </div>
-                </a>
-            </div>
+' . $articles . '
         </div>
     </div>
 </section>
