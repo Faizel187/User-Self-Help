@@ -2,7 +2,7 @@
 
 $title = 'Network Articles';
 
-$output = '
+$content = '
 <!--============= Banner Section Starts Here =============-->
 <div class="hero-section bg_img" data-background="assets/images/banner/short-banner.jpg">
     <div class="container">

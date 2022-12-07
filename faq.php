@@ -3,11 +3,31 @@
 //==================beginning of  backend================================================
 require_once "Modal/config.php";
 $data = '';
-$pull = 'SELECT areno, arename FROM area ORDER BY areno';
+$sql = "SELECT arename FROM area";
+$result = mysqli_query($conn, $sql);
+$faq = array();
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) 
+  {
+
+    array_push($faq, $row["arename"]);
+   // $data = ;
+    //echo $row["arename"];
+  }
+} 
+else 
+{
+  echo "0 results";
+}
+
+
+mysqli_close($conn);
+/*$pull = 'SELECT areno, arename FROM area ORDER BY areno';
 $res = $conn->query($pull);
 if(mysqli_num_rows($res)>0){
      while($r = mysqli_fetch_assoc($res)){
-    $data = '
+    $data = $data . '
     <ul id="faq-menu">
     <li class="nav-item">
         <a class="nav-link" href="#company">'.$r["arename"].'</a>
@@ -31,6 +51,7 @@ if(mysqli_num_rows($res)>0){
     ';
      }
 }
+*/
 //==================end of backend================================================
 //=============================================================================
 $title = 'Nkgwete IT Solutions | Help Centere';
@@ -62,7 +83,26 @@ $content = '
             <div class="col-lg-4">
                 <aside class="sticky-menu">
                     <div class="faq-menu bg_img mb-30" data-background="assets/images/faq/faq-menu.png">
-                        '.$data.'
+                    <ul id="faq-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#company">3rd Party</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#freelancer">Hardware</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#account">Software</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">General</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tec">Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#security">Info 2</a>
+                    </li>
+                    </ul>
                     </div>
                     <div class="faq-video">
                             <img src="assets/images/faq/video.png" alt="faq">
