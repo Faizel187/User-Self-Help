@@ -56,6 +56,9 @@
                         <a href="faq.php">FAQ`s</a>
                     </li>
                     <li>
+                        <a href="tipsandtricks.php">Tips & Tricks</a>
+                    </li>
+                    <li>
                         <a href="#">How To</a>
                         <ul class="submenu">
                             <li>
@@ -89,7 +92,7 @@
 
 <!--============= BEGIN CONTENT AREA  =================================================================-->
 
-<?php 
+<?php
 
 echo $content;
 
