@@ -13,15 +13,17 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $output = $output . '
     <div class="col-12">
-    <div class="bill-item">
-        <div class="bill-thumb">
-            <img src="' . $row["caticon"] . '" alt="bill">
-        </div>
-        <div class="bill-content">
-            <h3 class="title"><a href="office.php?catno=' . $row["catno"] . '">' . $row["catname"] . '</a></h3>
-            <p>' . $row["catdesc"] . '</p>
-        </div>
-    </div>
+        <a class="col" href="office.php?catno=' . $row["catno"] . '">
+            <div class="bill-item">
+                <div class="bill-thumb">
+                    <img src="' . $row["caticon"] . '" alt="bill">
+                </div>
+                <div class="bill-content">
+                    <h3 class="title">' . $row["catname"] . '</h3>
+                    <p>' . $row["catdesc"] . '</p>
+                </div>
+            </div>
+        </a>
     </div>
     ';
     }
