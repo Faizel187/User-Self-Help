@@ -16,26 +16,21 @@ $content = '
         <div class="container">
             <div class="row mb-30-none justify-content-center">
 
-
+        <div class="col-12">
+            <div class="cate-single-item">
+                <h4 class="title">Coolest website of the day: <a href=" https://stumbled.to/"> https://stumbled.to/</a></h4>
+                <hr style="border: 0.5px solid black;">
+                <p style="color: green;">Remember StumbleUpon? The popular site was shuttered, but several StumbleUpon alternatives rose up in its wake. Stumble works on the same principles of random discovery and that makes it a worthwhile website to go on when you are bored.
+                The links are carefully curated and as of the last count, there are at least 2400+ sites on their radar.</p>
+            </div>
+        </div>
 
         <div class="col-12">
-        <div class="cate-single-item">
-            <h4 class="title">Coolest website of the day: <a href=" https://stumbled.to/"> https://stumbled.to/</a></h4>
-            <p>Remember StumbleUpon? The popular site was shuttered, but several StumbleUpon alternatives rose up in its wake. Stumble works on the same principles of random discovery and that makes it a worthwhile website to go on when you are bored.
-            The links are carefully curated and as of the last count, there are at least 2400+ sites on their radar.</p>
-
-
+            <div class="cate-single-item">
+                <h4 class="title">Coolest website of the day: <a href=" https://www.duolingo.com/">  https://www.duolingo.com/</a></h4>
+                <p>Make the most of your free time and cross something off your bucket by becoming fluent in a different language with the help of Duolingo! This fun website also doubles as a fun free app on your phone so you never miss a lesson.</p>
+            </div>
         </div>
-    </div>
-
-    <div class="col-12">
-    <div class="cate-single-item">
-        <h4 class="title">Coolest website of the day: <a href=" https://www.duolingo.com/">  https://www.duolingo.com/</a></h4>
-        <p>Make the most of your free time and cross something off your bucket by becoming fluent in a different language with the help of Duolingo! This fun website also doubles as a fun free app on your phone so you never miss a lesson.</p>
-
-
-    </div>
-</div>
 
 
 
