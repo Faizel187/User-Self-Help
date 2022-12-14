@@ -32,12 +32,12 @@ $content = '
                     <div class="cate-single-item">
                         <h4 class="title">Helpful Windows Shortcuts</h4>
                             <ol style="list-style-type: square">
-                                <li>Alt+Tab: Switch apps</li>
-                                <li>Win+D: Show or hide the desktop</li>
-                                <li>Ctrl+Shift+Esc: Open the Task Manager</li>
-                                <li>Win+X: Open the hidden menu</li>
-                                <li><a href="windowShortcuts.php">Click here to view more<a></li>
+                                <li>Alt + Tab: Switch apps</li>
+                                <li>Win + D: Show or hide the desktop</li>
+                                <li>Ctrl + Shift + Esc: Open the Task Manager</li>
+                                <li>Win + X: Open the hidden menu</li>
                             </ol>
+                            <p>&emsp;<a href="windowShortcuts.php">Click here to view more<a></p>
                         <div class="cate-author">
                         <div class="thumb">
                         <a href="#"><img src="assets/images/cate/like.png" alt="cate"></a>
@@ -53,8 +53,8 @@ $content = '
                                 <li>Ctrl + shift + M - Mute/unmute yourself</li>
                                 <li>Ctrl+Shift+Esc: Open the Task Manager</li>
                                 <li>Ctrl+Shift+D - Decline call</li>
-                                <li><a href="#">Click here to view more<a></li>
                             </ol>
+                            <p>&emsp;<a href="teamsShortcuts.php">Click here to view more<a></p>
                         <div class="cate-author">
                         <div class="thumb">
                         <a href="#"><img src="assets/images/cate/like.png" alt="cate"></a>
