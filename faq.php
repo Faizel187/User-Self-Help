@@ -58,16 +58,17 @@ $content = '
                                     <span class="icon"></span>
                                 </div>
                                 <div class="faq-content">
-                                    <p> How does the 3rd Party Repairs Process Work, Information goes here</p>
+                                    <p>For Warranty repairs the Field Service Engineer logs a ticket by sending a completed Job Card together with Diagnostic Report and Pictures to Vendor, Mustek will generate a request and send ref.no to the Field Service Engineer.  </p>
+                                    <p>Shortly after sending the email to Mustek the FSE logs a child ticket on the Helix system, assign it to the 3rd Party Group and resolve the ticket shortly after. When the FSE receives the Ticket ref.no from Mustek the FSE will then update the Helix ticket with the 3rd Party Template. If the ETA is provided by vendor the FSE will include it in the template, if not the ticket will be updated with a valid next follow up date.  </p>
                                 </div>
                             </div>
                             <div class="faq--item">
                                 <div class="faq-title">
-                                    <h6 class="title">How Long Does 3rd Party Repairs Take</h6>
+                                    <h6 class="title">What is the estimated wait period 3rd Party Repairs</h6>
                                     <span class="icon"></span>
                                 </div>
                                 <div class="faq-content">
-                                    <p>Between one and two weeks</p>
+                                    <p>In warranty tickets is next business day; Out of Warranty is determined by the availability of replacement part(s)</p>
                                 </div>
                             </div>
                         </div>
@@ -81,12 +82,14 @@ $content = '
                                     <span class="icon"></span>
                                 </div>
                                 <div class="faq-content">
-                                    <p>How does the Cabling Process Work? - Information</p>
+                                    <p>User logs support call</p>
+                                    <p>Once the IMOM approves</p>
+                                    <p>Call is then routed accordingly and scheduled with user</p>
                                 </div>
                             </div>
                             <div class="faq--item">
                                 <div class="faq-title">
-                                    <h6 class="title">What problem does Deskoto solve?</h6>
+                                    <h6 class="title">What is the process for PC Replacements</h6>
                                     <span class="icon"></span>
                                 </div>
                                 <div class="faq-content">
