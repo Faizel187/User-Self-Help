@@ -56,7 +56,7 @@
                         <a href="faq.php">FAQ`s</a>
                     </li>
                     <li>
-                        <a href="tipsandtricks.php">Tips & Tricks</a>
+                        <a href="tipsTemplate.php">Tips & Tricks</a>
                     </li>
                     <li>
                         <a href="#">How To</a>

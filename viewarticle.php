@@ -100,8 +100,8 @@ $content = '
                                 <p>Content Feedback</p>
                                 <div id="response">
                                 <form action="#" method="post">
-                                <button name ="yes"><a href="#0" name="yes"  class="call-button" onclick="response()" style="background-color: #8aca38">Yes</a><button>
-                                <a href="#0" name="no"class="call-button" onclick="response()" style="background-color: #00B2f2">No</a>
+                                <a name="yes"  class="call-button" onclick="response()" style="background-color: #8aca38">Yes</a>
+                                <a name="no"class="call-button" onclick="response()" style="background-color: #00B2f2">No</a>
 </form>
                                 </div>
                             </div>
