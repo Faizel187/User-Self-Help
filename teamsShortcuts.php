@@ -51,7 +51,7 @@ $content = '
                         <br>
                         <h4>Navigating Features</h4>
                         <ul>
-                            <li><b>Ctrl + 1 - 5</b> Navigate up and down the left navigation rail</li>
+                            <li><b>Ctrl + 1 &#8594; 5</b> Navigate up and down the left navigation rail</li>
                             <li><b>Ctrl + E</b> Quick access to the search bar at the top of Teams.</li>
                             <li><b>Ctrl + /</b> See all of the commands that you can use to easily navigate.</li>
                         </ul>

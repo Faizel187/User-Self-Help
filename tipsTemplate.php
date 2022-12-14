@@ -1,3 +1,14 @@
+<style>
+    .likeBtn{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-image: url('assets/images/cate/like.png');
+        background-size: 70px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
 <?php
 $title = 'Nkgwete IT Solutions | Help Centere';
 $content = '
@@ -15,7 +26,7 @@ $content = '
     <section class="category-section padding-top padding-bottom">
         <div class="container">
             <div class="row mb-30-none justify-content-center">
-                <div class="col-12">
+                <!--<div class="col-12">
                     <div class="cate-single-item">
                         <h4 class="title">Most Useful Productivity Website</h4>
                         <p>STEP1: in outlook select file->options->add-ins->manage,select "disabled items",and then go </p>
@@ -27,7 +38,7 @@ $content = '
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="col-12">
                     <div class="cate-single-item">
                         <h4 class="title">Helpful Windows Shortcuts</h4>
@@ -38,9 +49,10 @@ $content = '
                                 <li>Win + X: Open the hidden menu</li>
                             </ol>
                             <p>&emsp;<a href="windowShortcuts.php">Click here to view more<a></p>
-                        <div class="cate-author">
+                        <div class="cate-author" id="response">
                         <div class="thumb">
-                        <a href="#"><img src="assets/images/cate/like.png" alt="cate"></a>
+                        <a onclick="response()"><img src="assets/images/cate/like.png" alt="cate"></a>
+                        <!--<input type="submit" name="like" class="likeBtn" value=""><!-- TODO Mtho -->
                     </div>
                         </div>
                     </div>
@@ -55,7 +67,7 @@ $content = '
                                 <li>Ctrl+Shift+D - Decline call</li>
                             </ol>
                             <p>&emsp;<a href="teamsShortcuts.php">Click here to view more<a></p>
-                        <div class="cate-author">
+                        <div class="cate-author" id="response">
                         <div class="thumb">
                         <a href="#"><img src="assets/images/cate/like.png" alt="cate"></a>
                     </div>
