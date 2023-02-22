@@ -10,7 +10,7 @@ function insert(){
 
 
 
-        $put = "INSERT INTO faq(faqtitle, faqcontent) VALUES ('$title', '$comm')";
+        $put = "INSERT INTO faq(faqtitle, faqcontent, areno) VALUES ('$title', '$comm', '$faq')";
         return mysqli_query($conn,$put);
     }
 }
