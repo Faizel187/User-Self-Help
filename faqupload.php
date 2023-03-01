@@ -31,6 +31,19 @@ function insert(){
     return mysqli_query($conn, $sel);
  }
 
+ $res = getVal();
+ $con = '';
+
+ if($res-> num_rows > 0){
+    while($row = mysqli_fetch_assoc($res)){
+       $con = '
+       
+           <option value="'.$row["arename"].'">'.$row["arename"].'</option>
+        
+       ';
+    }
+ }
+
 
 
 $content = '
@@ -51,9 +64,7 @@ $content = '
             <h1>File Upload</h1>
             <select class="form-select mb-2" name="faqarea" aria-label="Default select example">
                 <option selected>Select FAQ Area</option>
-                <option value="Option 1">Option 1</option>
-                <option value="Option 2">Option 2</option>
-                <option value="Option 3">Option 3</option>
+                 '. $con.'
               </select>
             <div class="form-floating mb-3">
                 <label for="inputTitle" class="visually-hidden">Title</label>

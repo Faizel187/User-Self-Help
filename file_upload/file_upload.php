@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $category = $_POST['category'];
     $title = $_POST['title'];
 
-    $file = rand(100, 100000) . "-" . $_FILES['location']['name'];
+    $file = rand(100, 100000) . "-  " . $_FILES['location']['name'];
 
     $tname = $_FILES['location']['tmp_name'];
     $dir = "../assets/images/faq/";
