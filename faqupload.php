@@ -36,7 +36,7 @@ function insert(){
 
  if($res-> num_rows > 0){
     while($row = mysqli_fetch_assoc($res)){
-       $con = '
+       $con = $con . '
        
            <option value="'.$row["arename"].'">'.$row["arename"].'</option>
         
