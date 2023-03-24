@@ -51,7 +51,7 @@ $content = '
  <section class="banner-1 bg_img" data-background="assets/images/banner/banner-3.jpg">
      <div class="container">
          <div class="banner-content cl-white">
-            <h1 class="title">Knowledge Management</h1>
+            <h1 class="title">FAQ Management</h1>
             <p>File Capture</p>
          </div>
     </div>
